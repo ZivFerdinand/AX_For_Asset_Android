@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.axforasset.MainActivity">
 
 
     <ImageView
@@ -25,7 +25,7 @@
         android:id="@+id/title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sf_pro"
+        android:fontFamily="@font/SF_Pro"
         android:gravity="center"
         android:text="@string/main_welcome"
         android:textStyle="bold"
@@ -39,7 +39,7 @@
         android:id="@+id/title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sf_pro"
+        android:fontFamily="@font/SF_Pro"
         android:gravity="center"
         android:text="@string/desc_welcome"
         android:textSize="28sp"
