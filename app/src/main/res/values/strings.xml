@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AxForAsset</string>
+    <string name="app_name">AX_For_Asset</string>
+    <string name="logo_app">Logo App</string>
+    <string name="main_welcome">Welcome to AXForAsset!</string>
+    <string name="desc_welcome">Powering Your Vision with Incredible Resources!</string>
+    <string name="desc_copyright">Copyright AXForAsset 2024</string>
+
 </resources>
