@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(
                 v -> {
                     // Intent untuk berpindah ke LoginActivity
-                    Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, Home.class);
                     startActivity(intent);
                 }
         );
