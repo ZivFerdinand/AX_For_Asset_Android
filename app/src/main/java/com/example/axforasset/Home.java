@@ -7,9 +7,11 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ import java.util.List;
 public class Home extends AppCompatActivity {
 
     ViewPager2 viewPager2;
+    Button profileButton;
     private Handler slideHandler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,14 @@ public class Home extends AppCompatActivity {
                 slideHandler.postDelayed(sliderRunnable, 3000);
             }
         });
+        profileButton=findViewById(R.id.profilebtn);
+        profileButton.setOnClickListener(
+                v -> {
+                    // Intent untuk berpindah ke LoginActivity
+                    Intent intent = new Intent(Home.this, ProfileActivity.class);
+                    startActivity(intent);
+                }
+        );
     }
 
     private Runnable sliderRunnable = new Runnable() {

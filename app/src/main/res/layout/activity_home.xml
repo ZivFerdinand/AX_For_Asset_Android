@@ -11,4 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         tools:ignore="MissingConstraints" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:id="@+id/profilebtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
