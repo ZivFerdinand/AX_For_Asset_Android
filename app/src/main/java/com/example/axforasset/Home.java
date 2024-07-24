@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +22,13 @@ public class Home extends AppCompatActivity {
     ViewPager2 viewPager2;
     Button profileButton;
     private Handler slideHandler = new Handler();
+    TextView username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        username = findViewById(R.id.name);
+        username.setText("Welcome, "+UserData.getInstance().getUsername());
         viewPager2 = findViewById(R.id.viewPager);
 
         List<SlideItem> sliderItem = new ArrayList<>();
