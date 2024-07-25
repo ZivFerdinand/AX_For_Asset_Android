@@ -89,6 +89,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sf_pro"
                     android:hint="@string/username"
+                    android:textSize="18sp"
                     android:padding="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -126,6 +127,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
+                    android:textSize="18sp"
                     android:fontFamily="@font/sf_pro"
                     android:inputType="textPassword"
                     android:padding="10dp" />
@@ -150,6 +152,7 @@
                 android:layout_marginTop="65dp"
                 android:background="@drawable/button_background"
                 android:fontFamily="@font/sf_pro"
+                android:textSize="18sp"
                 android:text="@string/login"
                 app:backgroundTint="@color/old_orange" />
 
