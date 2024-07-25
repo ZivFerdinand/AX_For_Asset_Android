@@ -4,5 +4,11 @@
     <string name="main_welcome">Welcome to AXForAsset!</string>
     <string name="desc_welcome">Powering Your Vision with Incredible Resources!</string>
     <string name="desc_copyright">Copyright AXForAsset 2024</string>
+    <string name="app_logo">app_logo</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="error_message_for_password">Error message for password</string>
+    <string name="error_message_for_username">Error message for username</string>
 
 </resources>
