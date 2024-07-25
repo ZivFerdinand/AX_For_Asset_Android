@@ -80,9 +80,10 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_field"
                 android:fontFamily="@font/sf_pro"
+                app:hintEnabled="false"
                 android:layout_marginBottom="8dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -114,12 +115,13 @@
             <!-- Password field with TextInputLayout -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:background="@drawable/text_field"
                 android:fontFamily="@font/sf_pro"
+                app:hintEnabled="false"
                 android:layout_marginBottom="8dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -145,7 +147,7 @@
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="75dp"
+                android:layout_marginTop="65dp"
                 android:background="@drawable/button_background"
                 android:fontFamily="@font/sf_pro"
                 android:text="@string/login"
