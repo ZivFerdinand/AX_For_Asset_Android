@@ -17,9 +17,10 @@
 
         <!-- Image at the top (20% of the screen height) -->
         <ImageView
+            android:contentDescription="@string/app_logo"
             android:id="@+id/top_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="280dp"
             android:scaleType="centerCrop"
             android:src="@drawable/cat_login"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,9 +33,9 @@
         <LinearLayout
             android:id="@+id/login_container"
             android:layout_width="match_parent"
-            android:layout_height="580dp"
+            android:layout_height="650dp"
             android:layout_gravity="center"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="120dp"
             android:background="@drawable/rounded_rectangle_bg"
             android:elevation="10dp"
             android:orientation="vertical"
@@ -43,6 +44,7 @@
 
 
             <ImageView
+                android:contentDescription="@string/app_logo"
                 android:id="@+id/imageView"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -57,8 +59,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/sf_pro"
-                android:layout_marginBottom="50dp"
-                android:text="Login"
+                android:layout_marginBottom="75dp"
+                android:text="@string/login"
                 android:textColor="#000000"
                 android:textSize="34sp"
                 android:textStyle="bold" />
@@ -68,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:fontFamily="@font/sf_pro"
-                android:text="Username"
+                android:text="@string/username"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -78,14 +80,16 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_field"
                 android:fontFamily="@font/sf_pro"
+                app:hintEnabled="false"
                 android:layout_marginBottom="8dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sf_pro"
-                    android:hint="Username"
+                    android:hint="@string/username"
+                    android:textSize="18sp"
                     android:padding="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -95,7 +99,7 @@
                 android:id="@+id/username_error"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Error message for username"
+                android:text="@string/error_message_for_username"
                 android:fontFamily="@font/sf_pro"
                 android:textColor="#ff0000"
                 android:visibility="gone" />
@@ -105,23 +109,25 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:fontFamily="@font/sf_pro"
-                android:text="Password"
+                android:text="@string/password"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
             <!-- Password field with TextInputLayout -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:background="@drawable/text_field"
                 android:fontFamily="@font/sf_pro"
+                app:hintEnabled="false"
                 android:layout_marginBottom="8dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password"
+                    android:hint="@string/password"
+                    android:textSize="18sp"
                     android:fontFamily="@font/sf_pro"
                     android:inputType="textPassword"
                     android:padding="10dp" />
@@ -133,7 +139,7 @@
                 android:id="@+id/password_error"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Error message for password"
+                android:text="@string/error_message_for_password"
                 android:fontFamily="@font/sf_pro"
                 android:textColor="#ff0000"
                 android:visibility="gone" />
@@ -143,10 +149,11 @@
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="65dp"
                 android:background="@drawable/button_background"
                 android:fontFamily="@font/sf_pro"
-                android:text="Login"
+                android:textSize="18sp"
+                android:text="@string/login"
                 app:backgroundTint="@color/old_orange" />
 
 
@@ -157,7 +164,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="13sp"
-                android:text="@string/desc_copyright"/>
+                android:text="@string/desc_copyright"
+                android:layout_marginTop="5dp"
+                />
         </LinearLayout>
 
     </FrameLayout>

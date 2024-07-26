@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -19,7 +20,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
-
+import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,12 +30,15 @@ public class Home extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPagerTabs;
     TabPagerAdapter tabPagerAdapter;
+    Button profileButton;
     private Handler slideHandler = new Handler();
+    TextView username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        username = findViewById(R.id.name);
+        username.setText("Welcome, "+UserData.getInstance().getUsername());
         viewPager2 = findViewById(R.id.viewPager);
 
         List<SlideItem> sliderItem = new ArrayList<>();
@@ -69,8 +73,6 @@ public class Home extends AppCompatActivity {
             }
         });
 
-
-
 //        tab
         tabLayout = findViewById(R.id.tabLayout);
         viewPagerTabs = findViewById(R.id.viewPagerTabs);
@@ -91,11 +93,15 @@ public class Home extends AppCompatActivity {
                 tab.setCustomView(tabTextView);
             }
         }
+        profileButton=findViewById(R.id.profilebtn);
+        profileButton.setOnClickListener(
+                v -> {
+                    // Intent untuk berpindah ke LoginActivity
+                    Intent intent = new Intent(Home.this, ProfileActivity.class);
+                    startActivity(intent);
+                }
+        );
     }
-
-
-
-
 
 
     private Runnable sliderRunnable = new Runnable() {
