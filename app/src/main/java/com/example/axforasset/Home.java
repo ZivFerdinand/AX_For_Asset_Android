@@ -2,14 +2,23 @@ package com.example.axforasset;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +26,9 @@ import java.util.List;
 public class Home extends AppCompatActivity {
 
     ViewPager2 viewPager2;
+    TabLayout tabLayout;
+    ViewPager viewPagerTabs;
+    TabPagerAdapter tabPagerAdapter;
     private Handler slideHandler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +68,35 @@ public class Home extends AppCompatActivity {
                 slideHandler.postDelayed(sliderRunnable, 3000);
             }
         });
+
+
+
+//        tab
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPagerTabs = findViewById(R.id.viewPagerTabs);
+        tabPagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        viewPagerTabs.setAdapter(tabPagerAdapter);
+        tabLayout.setupWithViewPager(viewPagerTabs);
+
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            if (tab != null) {
+                // Inflate a simple TextView as custom view for each tab
+                TextView tabTextView = (TextView) LayoutInflater.from(this).inflate(android.R.layout.simple_list_item_1, null);
+                tabTextView.setText(tab.getText()); // Set the tab's text
+                tabTextView.setTextSize(16); // Set text size
+                tabTextView.setTypeface(null, Typeface.BOLD); // Set text style
+                tabTextView.setTextColor(Color.parseColor("#000000")); // Set text color
+                tabTextView.setGravity(Gravity.CENTER);
+                tab.setCustomView(tabTextView);
+            }
+        }
     }
+
+
+
+
+
 
     private Runnable sliderRunnable = new Runnable() {
         @Override

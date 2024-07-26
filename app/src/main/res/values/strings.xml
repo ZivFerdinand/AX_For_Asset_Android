@@ -1,8 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AX_For_Asset</string>
     <string name="logo_app">Logo App</string>
     <string name="main_welcome">Welcome to AXForAsset!</string>
     <string name="desc_welcome">Powering Your Vision with Incredible Resources!</string>
     <string name="desc_copyright">Copyright AXForAsset 2024</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="terms">
+        <![CDATA[
+        <h4>1. Definitions</h4>
+        <p><b>Application:</b> Refers to the AXForAssets application that provides game asset trading services.</p>
+        <p><b>User:</b> Refers to the individual who uses the AXForAssets application.</p>
+        <p><b>Services:</b> Refers to the game asset trading services provided by the AXForAssets application.</p>
+        <p><b>Game Asset:</b> Refers to a digital item that can be used in a game, such as characters, items, or virtual currency.</p>
+        <p><b>Seller:</b> Refers to a user who offers game assets for sale in the application.</p>
+        <p><b>Buyer:</b> Refers to a user who purchases game assets in the application.</p>
+
+        <h4>2. General Provisions</h4>
+        <p>Users are required to read and understand these Terms of Service before using the application.</p>
+        <p>Using the AXForAssets application indicates the users agreement to these Terms of Service.</p>
+        <p>AXForAssets reserves the right to change these Terms of Service at any time without prior notice.</p>
+        <p>Users are required to comply with all applicable rules and regulations in the application.</p>
+        <p>AXForAssets is not responsible for any losses arising from the users use of the application.</p>
+
+        <h4>3. User Registration</h4>
+        <p>To use the application, users must first register.</p>
+        <p>Users are required to provide accurate and complete information when registering.</p>
+        <p>Users are responsible for the security of their own accounts.</p>
+        <p>AXForAssets reserves the right to block or delete user accounts that violate these Terms of Service.</p>
+
+        <h4>4. Transactions</h4>
+        <p>All game asset trading transactions in the AXForAssets application are conducted through a payment system integrated with the application.</p>
+        <p>AXForAssets is not responsible for any transactions made outside the application.</p>
+        <p>Sellers and buyers are required to comply with all applicable rules and regulations in the application regarding trading transactions.</p>
+        <p>AXForAssets reserves the right to charge a transaction fee for each trading transaction made in the application.</p>
+
+        <h4>5. Copyright</h4>
+        <p>All game assets sold in the AXForAssets application are protected by copyright.</p>
+        <p>Sellers must have copyright to the game assets they sell.</p>
+        <p>Buyers are required to use the purchased game assets in a manner that complies with copyright provisions.</p>
+
+        <h4>6. Privacy</h4>
+        <p>AXForAssets is committed to protecting user privacy.</p>
+        <p>AXForAssets will not share user personal information with third parties without user consent.</p>
+        <p>Users can read the AXForAssets privacy policy at https://axessusa.com/contact.</p>
+
+        <h4>7. Contact Us</h4>
+        <p>If users have any questions or complaints regarding the AXForAssets application, they can contact customer service at https://axassets.com/contact.</p>
+        ]]>
+    </string>
+
+    <string name="conditions">
+        <![CDATA[
+        <h4>1. Eligibility</h4>
+        <p>Users must be 18 years of age or older to use the AXForAssets application.</p>
+        <p>Users must be able to enter into legally binding contracts.</p>
+        <p>Users must have a valid payment method.</p>
+
+        <h4>2. Prohibited Activities</h4>
+        <p>Users are prohibited from using the AXForAssets application for any illegal or unauthorized purposes.</p>
+        <p>Users are prohibited from using the AXForAssets application to sell or purchase game assets that are infringing on any intellectual property rights.</p>
+        <p>Users are prohibited from using the AXForAssets application to transmit any harmful or malicious content.</p>
+        <p>Users are prohibited from using the AXForAssets application to impersonate any other person or entity.</p>
+
+        <h4>3. User Conduct</h4>
+        <p>Users are required to be respectful and courteous to other users.</p>
+        <p>Users are required to comply with all applicable laws and regulations.</p>
+        <p>Users are required to use the AXForAssets application in a responsible manner.</p>
+
+        <h4>4. Account Security</h4>
+        <p>Users are responsible for the security of their own accounts.</p>
+        <p>Users are required to keep their passwords confidential.</p>
+        <p>Users are required to report any unauthorized activity on their accounts to AXForAssets immediately.</p>
+
+        <h4>5. Limitation of Liability</h4>
+        <p>AXForAssets is not responsible for any damages arising from the use of the AXForAssets application.</p>
+        <p>AXForAssets is not responsible for any damages arising from the sale or purchase of game assets through the AXForAssets application.</p>
+        <p>AXForAssets is not responsible for any damages arising from any third party content that is accessed or downloaded through the AXForAssets application.</p>
+
+        <h4>6. Indemnification</h4>
+        <p>Users agree to indemnify and hold harmless AXForAssets, its affiliates, and its employees and agents from and against any and all claims, losses, damages, liabilities, costs, and expenses (including reasonable attorneys fees) arising out of or in connection with the users use of the AXForAssets application.</p>
+
+        <h4>7. Termination</h4>
+        <p>AXForAssets may terminate a users account at any time for any reason.</p>
+        <p>AXForAssets may terminate a users account without notice if the user violates any of these conditions.</p>
+        <p>Upon termination of a users account, the users access to the AXForAssets application will be immediately revoked.</p>
+
+        <h4>8. Changes to Conditions</h4>
+        <p>AXForAssets reserves the right to change these conditions at any time without prior notice.</p>
+        <p>Users are responsible for keeping themselves informed of the latest conditions.</p>
+        <p>Continued use of the AXForAssets application after any changes to these conditions indicates the users acceptance of the changes.</p>
+
+        <h4>9. Governing Law</h4>
+        <p>These conditions shall be governed by and construed in accordance with the laws of Indonesia.</p>
+        <p>Any disputes arising out of or in connection with these conditions shall be resolved exclusively in the courts of Indonesia.</p>
+
+        <h4>10. Entire Agreement</h4>
+        <p>These conditions constitute the entire agreement between AXForAssets and the user with respect to the use of the AXForAssets application.</p>
+        <p>Any prior or contemporaneous communications, representations, or agreements, whether oral or written, shall have no force or effect.</p>
+
+        <h4>11. Severability</h4>
+        <p>If any provision of these conditions is held to be invalid or unenforceable, such provision shall be struck from these conditions and the remaining provisions shall remain in full force and effect.</p>
+
+        <h4>12. Waiver</h3>
+        <p>The failure of AXForAssets to enforce any provision of these conditions shall not constitute a waiver of that provision or any other provision of these conditions.</p>
+
+        <h4>13. Notices</h4>
+        <p>All notices and other communications hereunder shall be in writing and shall be deemed to have been duly given when delivered in person, upon the first business day following deposit in the United States mail, postage prepaid, certified or registered, return receipt requested, addressed as follows:</p>
+        <p>AXForAssets</p>
+        <p>Sentul</p>
+        ]]>
+    </string>
 </resources>
