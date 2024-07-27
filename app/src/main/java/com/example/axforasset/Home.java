@@ -2,6 +2,7 @@ package com.example.axforasset;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -17,6 +18,8 @@ import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
@@ -30,7 +33,13 @@ public class Home extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPagerTabs;
     TabPagerAdapter tabPagerAdapter;
-    Button profileButton;
+//    Button profileButton;
+    private CardView menu;
+    private FrameLayout hotspot;
+    private ImageButton navButton;
+    private Button itemsButton;
+    private Button profileButton;
+    private Button logoutButton;
     private Handler slideHandler = new Handler();
     TextView username;
     @Override
@@ -38,14 +47,51 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         username = findViewById(R.id.name);
-        username.setText("Welcome, "+UserData.getInstance().getUsername());
+        username.setText(UserData.getInstance().getUsername());
         viewPager2 = findViewById(R.id.viewPager);
+        navButton = findViewById(R.id.navButton);
+        menu = findViewById(R.id.menuNav);
+        hotspot = findViewById(R.id.hotspot);
+        itemsButton=findViewById(R.id.itemsButton);
+        profileButton=findViewById(R.id.profileButton);
+        logoutButton=findViewById(R.id.logoutButton);
+        navButton.setOnClickListener(
+                v -> {
+                    menu.setVisibility(View.VISIBLE);
+                    hotspot.setVisibility(View.VISIBLE);
+                }
+        );
 
+        // Set up click listener for menu
+        hotspot.setOnClickListener(
+                v -> {
+                    menu.setVisibility(View.GONE);
+                    hotspot.setVisibility(View.GONE);
+                }
+        );
+//        itemsButton.setOnClickListener(
+//                v->{
+//                    Intent intent = new Intent(Home.this, Items.class);
+//                    startActivity(intent);
+//                }
+//        );
+        profileButton.setOnClickListener(
+                v->{
+                    Intent intent = new Intent(Home.this, ProfileActivity.class);
+                    startActivity(intent);
+                }
+        );
+        logoutButton.setOnClickListener(
+                v->{
+                    Intent intent = new Intent(Home.this, LoginActivity.class);
+                    startActivity(intent);
+                }
+        );
         List<SlideItem> sliderItem = new ArrayList<>();
-        sliderItem.add(new SlideItem(R.drawable.profile_image));
-        sliderItem.add(new SlideItem(R.drawable.cat_login));
-        sliderItem.add(new SlideItem(R.drawable.logo));
-        sliderItem.add(new SlideItem(R.drawable.logo_full));
+        sliderItem.add(new SlideItem(R.drawable.carousel_1));
+        sliderItem.add(new SlideItem(R.drawable.carousel_2));
+        sliderItem.add(new SlideItem(R.drawable.carousel_3));
+        sliderItem.add(new SlideItem(R.drawable.carousel_4));
 
         viewPager2.setAdapter(new SlideAdapter(sliderItem, viewPager2));
         viewPager2.setClipToPadding(false);
@@ -93,14 +139,14 @@ public class Home extends AppCompatActivity {
                 tab.setCustomView(tabTextView);
             }
         }
-        profileButton=findViewById(R.id.profilebtn);
-        profileButton.setOnClickListener(
-                v -> {
-                    // Intent untuk berpindah ke LoginActivity
-                    Intent intent = new Intent(Home.this, ProfileActivity.class);
-                    startActivity(intent);
-                }
-        );
+//        profileButton=findViewById(R.id.profilebtn);
+//        profileButton.setOnClickListener(
+//                v -> {
+//                    // Intent untuk berpindah ke LoginActivity
+//                    Intent intent = new Intent(Home.this, ProfileActivity.class);
+//                    startActivity(intent);
+//                }
+//        );
     }
 
 
