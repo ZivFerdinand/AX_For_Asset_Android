@@ -118,4 +118,7 @@ public class ItemsActivity extends AppCompatActivity {
         }
         itemsAdapter.notifyDataSetChanged();
     }
+
+
+
 }
