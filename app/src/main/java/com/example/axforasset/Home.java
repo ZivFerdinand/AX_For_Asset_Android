@@ -69,12 +69,12 @@ public class Home extends AppCompatActivity {
                     hotspot.setVisibility(View.GONE);
                 }
         );
-//        itemsButton.setOnClickListener(
-//                v->{
-//                    Intent intent = new Intent(Home.this, Items.class);
-//                    startActivity(intent);
-//                }
-//        );
+        itemsButton.setOnClickListener(
+                v->{
+                    Intent intent = new Intent(Home.this, ItemsActivity.class);
+                    startActivity(intent);
+                }
+        );
         profileButton.setOnClickListener(
                 v->{
                     Intent intent = new Intent(Home.this, ProfileActivity.class);

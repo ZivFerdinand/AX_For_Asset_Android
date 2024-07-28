@@ -61,12 +61,12 @@ public class ProfileActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
         );
-//        itemsButton.setOnClickListener(
-//                v->{
-//                    Intent intent = new Intent(ProfileActivity.this, Items.class);
-//                    startActivity(intent);
-//                }
-//        );
+        itemsButton.setOnClickListener(
+                v->{
+                    Intent intent = new Intent(ProfileActivity.this, ItemsActivity.class);
+                    startActivity(intent);
+                }
+        );
         profileButton.setOnClickListener(
                 v->{
                     Intent intent = new Intent(ProfileActivity.this, ProfileActivity.class);
