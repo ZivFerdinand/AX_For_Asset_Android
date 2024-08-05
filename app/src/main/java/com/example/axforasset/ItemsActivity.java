@@ -80,16 +80,16 @@ public class ItemsActivity extends AppCompatActivity {
         // Initialize the item list and adapter
         itemList = new ArrayList<>();
         // Add your items here
-        itemList.add(new Item("Banyan Tree", "A Heavy Branched Tree with Lots of Leaves", R.drawable.banyantree));
-        itemList.add(new Item("Sahara Desert", "A One Toned Sahara Desert", R.drawable.saharadesert));
-        itemList.add(new Item("House", "Wood Made House", R.drawable.house));
-        itemList.add(new Item("Ice Sparks", "Frozen Zoomed Ice", R.drawable.icesparks));
-        itemList.add(new Item("Wizard", "Cute Purple Toned Wizard", R.drawable.wizard));
-        itemList.add(new Item("Rock", "Greyish Rock, Three Types Included", R.drawable.rock));
-        itemList.add(new Item("Kodok Ijo", "Green Regular Frog", R.drawable.kodokijo));
-        itemList.add(new Item("Fountain Cat", "A Rare and Limited Supplied Cat Type", R.drawable.fountaincat));
-        itemList.add(new Item("Lilac", "An IU Inspired Lilac Album Asset", R.drawable.lilac));
-        itemList.add(new Item("Dys Butterfly", "Pretty Butterfly, Four Types Included", R.drawable.dysbutterfly));
+        itemList.add(new Item("Banyan Tree", 75, "A Heavy Branched Tree with Lots of Leaves", R.drawable.banyantree));
+        itemList.add(new Item("Sahara Desert", 85, "A One Toned Sahara Desert", R.drawable.saharadesert));
+        itemList.add(new Item("House", 40, "Wood Made House", R.drawable.house));
+        itemList.add(new Item("Ice Sparks", 90,  "Frozen Zoomed Ice", R.drawable.icesparks));
+        itemList.add(new Item("Wizard", 75, "Cute Purple Toned Wizard", R.drawable.wizard));
+        itemList.add(new Item("Rock", 20, "Greyish Rock, Three Types Included", R.drawable.rock));
+        itemList.add(new Item("Kodok Ijo", 110, "Green Regular Frog", R.drawable.kodokijo));
+        itemList.add(new Item("Fountain Cat", 60, "A Rare and Limited Supplied Cat Type", R.drawable.fountaincat));
+        itemList.add(new Item("Lilac", 80, "An IU Inspired Lilac Album Asset", R.drawable.lilac));
+        itemList.add(new Item("Dys Butterfly", 90, "Pretty Butterfly, Four Types Included", R.drawable.dysbutterfly));
 
         filteredItemList = new ArrayList<>(itemList);
 

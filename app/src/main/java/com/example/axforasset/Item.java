@@ -6,12 +6,14 @@ import android.os.Parcelable;
 public class Item implements Parcelable {
     private String title;
     private String description;
+    private Integer price;
     private int imageResourceId;
 
     // Constructor, getters, and setters
 
-    public Item(String title, String description, int imageResourceId) {
+    public Item(String title, Integer price, String description, int imageResourceId) {
         this.title = title;
+        this.price = price;
         this.description = description;
         this.imageResourceId = imageResourceId;
     }
@@ -19,6 +21,7 @@ public class Item implements Parcelable {
     protected Item(Parcel in) {
         title = in.readString();
         description = in.readString();
+        price = in.readInt(); // Add this line
         imageResourceId = in.readInt();
     }
 
@@ -43,6 +46,7 @@ public class Item implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);
         dest.writeString(description);
+        dest.writeInt(price); // Add this line
         dest.writeInt(imageResourceId);
     }
 
@@ -56,5 +60,9 @@ public class Item implements Parcelable {
 
     public int getImageResourceId() {
         return imageResourceId;
+    }
+
+    public Integer getPrice() {
+        return price;
     }
 }

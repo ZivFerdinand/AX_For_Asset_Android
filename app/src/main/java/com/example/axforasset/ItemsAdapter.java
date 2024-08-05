@@ -40,14 +40,17 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
             Intent intent = new Intent(context, DetailActivity.class);
             intent.putExtra("ITEM_TITLE", item.getTitle());
             intent.putExtra("ITEM_DESCRIPTION", item.getDescription());
+            intent.putExtra("ITEM_PRICE", item.getPrice()); // Pass the price
             intent.putExtra("ITEM_IMAGE", item.getImageResourceId()); // Pass the image resource ID
             context.startActivity(intent);
         });
 
-
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailActivity.class);
-            intent.putExtra("item", item);
+            intent.putExtra("ITEM_TITLE", item.getTitle());
+            intent.putExtra("ITEM_DESCRIPTION", item.getDescription());
+            intent.putExtra("ITEM_PRICE", item.getPrice()); // Pass the price
+            intent.putExtra("ITEM_IMAGE", item.getImageResourceId()); // Pass the image resource ID
             context.startActivity(intent);
         });
     }

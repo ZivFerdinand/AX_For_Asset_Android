@@ -94,7 +94,7 @@ public class Home extends AppCompatActivity {
         sliderItem.add(new SlideItem(R.drawable.carousel_4));
 
         viewPager2.setAdapter(new SlideAdapter(sliderItem, viewPager2));
-        viewPager2.setCurrentItem(2, false);
+        viewPager2.setCurrentItem(2, true);
         viewPager2.setClipToPadding(false);
         viewPager2.setClipChildren(false);
         viewPager2.setOffscreenPageLimit(5);
