@@ -63,8 +63,13 @@ public class DetailActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         paymentMethodsSpinner.setAdapter(adapter);
 
-        // Set up back button
-        findViewById(R.id.backButton).setOnClickListener(v -> finish());
+        // Set up back button to redirect to HomeActivity
+        findViewById(R.id.backButton).setOnClickListener(v -> {
+            Intent intent = new Intent(DetailActivity.this, Home.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        });
 
         // Set up purchase button with validation and interaction
         purchaseButton.setOnTouchListener((v, event) -> {
